@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background h-screen min-h-screen w-screen;
+  }
+}
+
+@layer components {
+  .box-title {
+    @apply text-blue-500 text-xs font-semibold;
+  }
+}
