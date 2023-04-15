@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <p>KPI</p>
+      <h1 className="text-3xl font-bold text-red-600">KPI</h1>
     </div>
   );
 }
