@@ -1,12 +1,11 @@
+import { Audence } from "./components/Audence";
 import { Box } from "./components/Box";
 
 function App() {
   return (
     <div className="container">
       <div className="py-[74px] gap-[18px] h-screen grid lg:grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-        <Box classes="xl:col-span-2">
-          <h2 className="box-title">Audence by channels</h2>
-        </Box>
+        <Audence />
 
         <Box classes="xl:col-span-2">
           <h2 className="box-title">Payment Last 3 Weeks</h2>

@@ -29,9 +29,6 @@ module.exports = {
           900: "#0C0E31",
         },
       },
-      gridTemplateColumns: {
-        dashboard: "1fr minmax(377px, 1fr) 239px",
-      },
     },
     container: {
       center: true,
