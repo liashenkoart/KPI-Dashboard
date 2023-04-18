@@ -1,5 +1,7 @@
 import { Audence } from "./components/Audence";
 import { Box } from "./components/Box";
+import { PaidNewUsers } from "./components/PaidNewUsers";
+import { TopPages } from "./components/TopPages";
 
 function App() {
   return (
@@ -15,13 +17,8 @@ function App() {
           <h2 className="box-title">Session over Time</h2>
         </Box>
 
-        <Box>
-          <h2 className="box-title">Paid vs Organic New Users</h2>
-        </Box>
-
-        <Box>
-          <h2 className="box-title">Top pages by Conversion</h2>
-        </Box>
+        <PaidNewUsers />
+        <TopPages />
 
         <Box classes="xl:col-span-2">
           <h2 className="box-title">MRR Movement</h2>
