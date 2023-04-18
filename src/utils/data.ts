@@ -92,3 +92,94 @@ export const MRRMOVEMENT_MOCK = [
     tp: 800,
   },
 ];
+
+export const CONVERSION_RATE_MOCK_DATA = [
+  { name: "Value 1", value: 900, count: 16024 },
+  { name: "Value 2", value: 500, count: 16024 },
+];
+
+export const SESSIONS_MOCK_DATA = [
+  {
+    month: "Feb",
+    value: 3.9,
+  },
+  {
+    month: "Mar",
+    value: 3.5,
+  },
+  {
+    month: "Apr",
+    value: 3.8,
+  },
+  {
+    month: "May",
+    value: 3.1,
+  },
+  {
+    month: "Jun",
+    value: 4.3,
+  },
+];
+
+export const PAYMENTS_MOCK_DATA = [
+  {
+    amount: 2800,
+  },
+  {
+    amount: 2300,
+  },
+  {
+    amount: 2800,
+  },
+  {
+    amount: 2100,
+  },
+  {
+    amount: 2800,
+  },
+  {
+    amount: 1100,
+  },
+  {
+    amount: 1200,
+  },
+  {
+    amount: 1000,
+  },
+  {
+    amount: 2800,
+  },
+  {
+    amount: 3800,
+  },
+  {
+    amount: 3400,
+  },
+  {
+    amount: 4100,
+  },
+  {
+    amount: 4200,
+  },
+  {
+    amount: 2500,
+  },
+  {
+    amount: 2000,
+  },
+  {
+    amount: 3300,
+  },
+  {
+    amount: 3200,
+  },
+  {
+    amount: 3300,
+  },
+  {
+    amount: 2900,
+  },
+  {
+    amount: 3000,
+  },
+];

@@ -12,7 +12,7 @@ const COLORS = ["#414468", "#E4E6F7", "#FF6493"];
 
 export const MRRMovement = () => {
   return (
-    <Box classes="xl:col-span-2 overflow-y-scroll">
+    <Box classes="md:col-span-2 overflow-y-scroll">
       <h2 className="box-title">MRR Movement</h2>
 
       <div className="mt-3 flex">
@@ -29,11 +29,7 @@ export const MRRMovement = () => {
             }}
           >
             <ReferenceLine y={0} fill="#E4E6F7" />
-            <CartesianGrid
-              vertical={false}
-              horizontalPoints={[50, 100]}
-              color="#E4E6F7"
-            />
+            <CartesianGrid vertical={false} color="#E4E6F7" opacity={0.4} />
             <Bar dataKey="uv" stackId="a" fill={COLORS[2]} />
             <Bar dataKey="tp" stackId="a" fill={COLORS[0]} />
             <Bar dataKey="pv" stackId="a" fill={COLORS[1]} />

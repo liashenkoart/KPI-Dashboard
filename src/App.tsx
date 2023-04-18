@@ -1,7 +1,9 @@
 import { Audence } from "./components/Audence";
-import { Box } from "./components/Box";
+import { ConversionRate } from "./components/ConversionRate";
 import { MRRMovement } from "./components/MRRMovement";
 import { PaidNewUsers } from "./components/PaidNewUsers";
+import { Payment } from "./components/Payment";
+import { SessionsOverTime } from "./components/SessionsOverTime";
 import { TopPages } from "./components/TopPages";
 
 function App() {
@@ -9,22 +11,12 @@ function App() {
     <div className="container">
       <div className="py-8 md:py-[74px] gap-[18px] h-screen grid lg:grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         <Audence />
-
-        <Box classes="xl:col-span-2">
-          <h2 className="box-title">Payment Last 3 Weeks</h2>
-        </Box>
-
-        <Box>
-          <h2 className="box-title">Session over Time</h2>
-        </Box>
-
+        <Payment />
+        <SessionsOverTime />
         <PaidNewUsers />
         <TopPages />
         <MRRMovement />
-
-        <Box>
-          <h2 className="box-title">Average Conversion Rate</h2>
-        </Box>
+        <ConversionRate />
       </div>
     </div>
   );
