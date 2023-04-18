@@ -12,13 +12,13 @@ import { Box } from "./Box";
 
 const COLORS = ["#E4E6F7", "#FF6493"];
 
-export const PaidNewUsers = () => {
+export const FinancialManagement = () => {
   const { width } = useWindowSize();
   const isMobile = width ? width < 768 : false;
 
   return (
     <Box>
-      <h2 className="box-title">Paid vs Organic New Users</h2>
+      <h2 className="box-title">Financial Management</h2>
 
       <div className="h-full items-end flex">
         <ResponsiveContainer

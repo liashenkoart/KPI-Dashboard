@@ -13,7 +13,7 @@ import { Box } from "./Box";
 const COLORS = ["#FF6493", "#414468", "#FFE2E0", "#FFA2AB"];
 const visitors = "32,762";
 
-export const Audence = () => {
+export const Occupancy = () => {
   const renderCustomLegend = (props: { payload?: Payload[] }) => {
     const { payload } = props;
     return (
@@ -39,7 +39,7 @@ export const Audence = () => {
 
   return (
     <Box classes="md:col-span-2">
-      <h2 className="box-title">Audence by Channels</h2>
+      <h2 className="box-title">Occupancy</h2>
 
       <div className="flex items-center lg:justify-center gap-4 h-full mt-2 lg:mt-0">
         <ResponsiveContainer width={176} height="95%">

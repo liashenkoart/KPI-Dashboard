@@ -10,10 +10,10 @@ import { Box } from "./Box";
 
 const COLORS = ["#414468", "#E4E6F7", "#FF6493"];
 
-export const MRRMovement = () => {
+export const ReputationManagement = () => {
   return (
     <Box classes="md:col-span-2 overflow-y-scroll">
-      <h2 className="box-title">MRR Movement</h2>
+      <h2 className="box-title">Reputation Management</h2>
 
       <div className="mt-3 flex">
         <ResponsiveContainer width="100%" height={170}>

@@ -9,10 +9,10 @@ import {
 import { SESSIONS_MOCK_DATA } from "../utils/data";
 import { Box } from "./Box";
 
-export const SessionsOverTime = () => {
+export const Retention = () => {
   return (
     <Box>
-      <h2 className="box-title">Session over Time</h2>
+      <h2 className="box-title">Retention</h2>
 
       <div className="mt-2 flex items-center justify-center h-full">
         <ResponsiveContainer height={200} width="120%">

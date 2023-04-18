@@ -4,10 +4,10 @@ import { Box } from "./Box";
 
 const COLORS = ["#FF6493", "#E4E6F7"];
 
-export const ConversionRate = () => {
+export const Marketing = () => {
   return (
     <Box>
-      <h2 className="box-title">Average Conversion Rate</h2>
+      <h2 className="box-title">Marketing</h2>
 
       <div className="flex items-center justify-center gap-4 h-full mt-2 lg:mt-0">
         <ResponsiveContainer width={176} height="95%">

@@ -9,10 +9,10 @@ import {
 import { PAYMENTS_MOCK_DATA } from "../utils/data";
 import { Box } from "./Box";
 
-export const Payment = () => {
+export const Delinquency = () => {
   return (
     <Box classes="xl:col-span-2">
-      <h2 className="box-title">Payment Last 3 Weeks</h2>
+      <h2 className="box-title">Delinquency</h2>
 
       <div className="mt-2 h-full flex items-center">
         <ResponsiveContainer height={200} width="100%">

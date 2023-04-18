@@ -13,13 +13,13 @@ import { Box } from "./Box";
 
 const COLORS = ["#414468", "#E4E6F7", "#FF6493"];
 
-export const TopPages = () => {
+export const LeaseFileAudit = () => {
   const { width } = useWindowSize();
   const isMobile = width ? width < 768 : false;
 
   return (
     <Box>
-      <h2 className="box-title">Top Pages by Conversion</h2>
+      <h2 className="box-title">Lease File Audit</h2>
 
       <div className="h-full items-end flex">
         <ResponsiveContainer

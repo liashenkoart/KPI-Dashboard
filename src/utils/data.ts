@@ -183,3 +183,12 @@ export const PAYMENTS_MOCK_DATA = [
     amount: 3000,
   },
 ];
+
+export const OCCUPANCY_MOCK_DATA = [
+  {
+    month: "Jan",
+    bud: 700,
+    act: 900,
+    comps: 1000,
+  },
+];
