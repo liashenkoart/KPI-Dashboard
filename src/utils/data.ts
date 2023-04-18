@@ -35,3 +35,60 @@ export const TOP_PAGES_MOCK = [
     percentage: "23%",
   },
 ];
+
+export const MRRMOVEMENT_MOCK = [
+  {
+    name: "New MRR",
+    pv: 400,
+    uv: -500,
+    tp: 200,
+  },
+  {
+    name: "Expansion",
+    pv: 1000,
+    uv: -800,
+    tp: 400,
+  },
+  {
+    name: "New MRR",
+    pv: 400,
+    uv: -600,
+    tp: 200,
+  },
+  {
+    name: "New MRR",
+    pv: 800,
+    uv: -500,
+    tp: 400,
+  },
+  {
+    name: "New MRR",
+    pv: 300,
+    uv: -400,
+    tp: 150,
+  },
+  {
+    name: "New MRR",
+    pv: 300,
+    uv: -400,
+    tp: 150,
+  },
+  {
+    name: "New MRR",
+    pv: 800,
+    uv: -500,
+    tp: 400,
+  },
+  {
+    name: "Expansion",
+    pv: 1000,
+    uv: -600,
+    tp: 400,
+  },
+  {
+    name: "Expansion",
+    pv: 1600,
+    uv: -900,
+    tp: 800,
+  },
+];
