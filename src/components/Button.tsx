@@ -1,5 +1,5 @@
 interface IButton {
-  onClick?: () => any;
+  onClick?: (value?: boolean) => any;
   title: string;
   classes?: string;
 }

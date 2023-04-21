@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Bar,
   BarChart,
@@ -9,21 +8,23 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { useAppDispatch, useAppSelector } from "../lib/hooks";
+import { toggleModal } from "../lib/slices/ui";
 import { OCCUPANCY_MOCK_DATA } from "../utils/data";
 import { Box } from "./Box";
-import Button from "./Button";
+import { BoxTitle } from "./BoxTitle";
 import CustomModal from "./CustomModal";
+import { OccupancyModal } from "./Modals/OccupancyModal";
 
 export const Occupancy = () => {
-  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+  const isOpenModal = useAppSelector((state) => state.ui.isOpenModal);
+  const modalType = useAppSelector((state) => state.ui.modalType);
 
   return (
     <>
       <Box classes="md:col-span-2">
-        <div className="flex items-center justify-between">
-          <h2 className="box-title">Occupancy</h2>
-          <Button title="+" onClick={() => setIsOpenModal(true)} />
-        </div>
+        <BoxTitle hasButton title="Occupancy" />
 
         <div className="flex items-center lg:justify-center gap-4 h-full mt-2 lg:mt-0">
           <ResponsiveContainer width="100%" height={180}>
@@ -56,8 +57,13 @@ export const Occupancy = () => {
         </div>
       </Box>
 
-      <CustomModal open={isOpenModal} setIsOpen={() => setIsOpenModal(false)}>
-        <h2>Occupancy</h2>
+      <CustomModal
+        open={isOpenModal && modalType === "Occupancy"}
+        setIsOpen={() =>
+          dispatch(toggleModal({ value: false, type: "Occupancy" }))
+        }
+      >
+        <OccupancyModal />
       </CustomModal>
     </>
   );
