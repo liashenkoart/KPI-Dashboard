@@ -270,3 +270,76 @@ export const MONTHS = [
     name: "December",
   },
 ];
+
+export const FOLLOW_WEEKLY = [
+  {
+    id: 1,
+    name: "0",
+  },
+  {
+    id: 2,
+    name: "1-2",
+  },
+  {
+    id: 3,
+    name: "3-4",
+  },
+  {
+    id: 4,
+    name: "5+",
+  },
+];
+
+export const FOLLOW_RESPONSIBLE = [
+  {
+    id: 1,
+    name: "LC",
+  },
+  {
+    id: 2,
+    name: "APM",
+  },
+  {
+    id: 3,
+    name: "RSC",
+  },
+  {
+    id: 4,
+    name: "PM",
+  },
+  {
+    id: 5,
+    name: "Accounting dept",
+  },
+  {
+    id: 6,
+    name: "Other",
+  },
+];
+
+export const DELIQUENCY_TOOLS = [
+  {
+    id: 1,
+    name: "PM Software",
+  },
+  {
+    id: 2,
+    name: "Resident file",
+  },
+  {
+    id: 3,
+    name: "Google doc",
+  },
+  {
+    id: 4,
+    name: "Slack",
+  },
+  {
+    id: 5,
+    name: "Word",
+  },
+  {
+    id: 6,
+    name: "Other",
+  },
+];

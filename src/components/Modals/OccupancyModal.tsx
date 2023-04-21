@@ -1,3 +1,4 @@
+import { CurrencyDollar } from "phosphor-react";
 import { useState } from "react";
 import { MONTHS } from "../../utils/data";
 import { CustomModalBody } from "../CustomModalBody";
@@ -20,7 +21,7 @@ export const OccupancyModal = () => {
             <label htmlFor="budgeted" className="form-label">
               Budgeted
             </label>
-            <Input type="number" id="budgeted" />
+            <Input type="number" id="budgeted" icon={<CurrencyDollar />} />
           </div>
 
           <div className="form-group">

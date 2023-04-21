@@ -11,9 +11,15 @@ interface ISelect {
   value: Value;
   onChange: any;
   data: Value[];
+  direction?: "top" | "bottom";
 }
 
-export const Select = ({ value, onChange, data }: ISelect) => {
+export const Select = ({
+  value,
+  onChange,
+  data,
+  direction = "top",
+}: ISelect) => {
   return (
     <Listbox value={value} onChange={onChange}>
       <div className="relative mt-1">
@@ -29,7 +35,11 @@ export const Select = ({ value, onChange, data }: ISelect) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="z-20 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+          <Listbox.Options
+            className={`z-20 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm ${
+              direction === "bottom" ? "bottom-full" : "top-full"
+            }`}
+          >
             {data.map((value, valueIdx) => (
               <Listbox.Option
                 key={valueIdx}
