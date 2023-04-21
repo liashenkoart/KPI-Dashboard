@@ -1,84 +1,64 @@
+import { useState } from "react";
 import {
-  PieChart,
-  Pie,
-  Cell,
-  Label,
+  Bar,
+  BarChart,
+  LabelList,
   Legend,
   ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
 } from "recharts";
-import { Payload } from "recharts/types/component/DefaultLegendContent";
-import { AUDENCE_MOCK_DATA } from "../utils/data";
+import { OCCUPANCY_MOCK_DATA } from "../utils/data";
 import { Box } from "./Box";
-
-const COLORS = ["#FF6493", "#414468", "#FFE2E0", "#FFA2AB"];
-const visitors = "32,762";
+import Button from "./Button";
+import CustomModal from "./CustomModal";
 
 export const Occupancy = () => {
-  const renderCustomLegend = (props: { payload?: Payload[] }) => {
-    const { payload } = props;
-    return (
-      <div className="flex flex-col gap-3">
-        {payload?.map((entry, index) => {
-          const { color } = entry;
-
-          return (
-            <div key={`item-${index}`} className="flex items-center gap-2">
-              <div
-                className="h-3 w-3 rounded-full shadow-sm"
-                style={{ background: color }}
-              ></div>
-              <span className="text-[10px] text-blue-300">
-                {entry.value} - 16,024
-              </span>
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
 
   return (
-    <Box classes="md:col-span-2">
-      <h2 className="box-title">Occupancy</h2>
+    <>
+      <Box classes="md:col-span-2">
+        <div className="flex items-center justify-between">
+          <h2 className="box-title">Occupancy</h2>
+          <Button title="+" onClick={() => setIsOpenModal(true)} />
+        </div>
 
-      <div className="flex items-center lg:justify-center gap-4 h-full mt-2 lg:mt-0">
-        <ResponsiveContainer width={176} height="95%">
-          <PieChart>
-            <Pie
-              data={AUDENCE_MOCK_DATA}
-              cx="50%"
-              cy="50%"
-              innerRadius={60}
-              outerRadius={85}
-              fill="#8884d8"
-              dataKey="value"
-            >
-              <Label value={visitors} position="centerBottom" />
-              <Label
-                value="Website Visitors"
-                position="centerTop"
-                className="text-[9px] translate-y-2 text-blue-200"
-              />
-              {AUDENCE_MOCK_DATA.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
+        <div className="flex items-center lg:justify-center gap-4 h-full mt-2 lg:mt-0">
+          <ResponsiveContainer width="100%" height={180}>
+            <BarChart data={OCCUPANCY_MOCK_DATA}>
+              <Tooltip />
+              <Bar dataKey="profit" fill="#8884d8">
+                <LabelList
+                  dataKey="profit"
+                  position="top"
+                  fill="#A2A6D1"
+                  className="text-[10px]"
                 />
-              ))}
-            </Pie>
-            <Legend
-              verticalAlign="middle"
-              wrapperStyle={{
-                left: 200,
-                position: "absolute",
-              }}
-              content={renderCustomLegend}
-            />
-          </PieChart>
-        </ResponsiveContainer>
+              </Bar>
+              <Bar dataKey="loss" fill="#82ca9d">
+                <LabelList
+                  dataKey="loss"
+                  position="top"
+                  fill="#A2A6D1"
+                  className="text-[10px]"
+                />
+              </Bar>
+              <Bar dataKey="comps" fill="#FF6493" />
+              <XAxis dataKey="month" tick={{ fontSize: 10 }} tickLine={false} />
+              <YAxis type="number" tick={{ fontSize: 10 }} tickLine={false} />
+              <Legend />
+            </BarChart>
+          </ResponsiveContainer>
 
-        <div className="lg:w-44"></div>
-      </div>
-    </Box>
+          <div className="lg:w-44"></div>
+        </div>
+      </Box>
+
+      <CustomModal open={isOpenModal} setIsOpen={() => setIsOpenModal(false)}>
+        <h2>Occupancy</h2>
+      </CustomModal>
+    </>
   );
 };
