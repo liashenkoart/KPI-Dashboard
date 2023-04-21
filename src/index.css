@@ -12,4 +12,12 @@
   .box-title {
     @apply text-blue-500 text-xs font-semibold;
   }
+
+  .form-group {
+    @apply my-4;
+  }
+
+  .form-label {
+    @apply text-sm text-blue-400 mb-2 block;
+  }
 }

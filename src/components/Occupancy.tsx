@@ -53,7 +53,7 @@ export const Occupancy = () => {
             </BarChart>
           </ResponsiveContainer>
 
-          <div className="lg:w-44"></div>
+          <div className="lg:w-36"></div>
         </div>
       </Box>
 

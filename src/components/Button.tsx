@@ -9,7 +9,6 @@ const Button = (props: IButton) => {
 
   const handleButtonClick = () => {
     if (onClick) {
-      console.log("clicked");
       onClick();
     }
   };
