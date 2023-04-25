@@ -5,7 +5,7 @@ import { YesNoSwitch } from "../YesNoSwitch";
 
 export const RetentionForm = () => {
   const [whichPrograms, setWhichPrograms] = useState(RETENTION_PROGRAMS[0]);
-  const [programsOften, setProgramsOften] = useState(RETENTION_OFTEN[0]);
+  const [programsOften, setProgramsOften] = useState(RETENTION_OFTEN[1]);
 
   const [programsInPlace, setProgramsInPlace] = useState(true);
 
