@@ -343,3 +343,105 @@ export const DELIQUENCY_TOOLS = [
     name: "Other",
   },
 ];
+
+export const RETENTION_PROGRAMS = [
+  {
+    id: 1,
+    name: "Events",
+  },
+  {
+    id: 2,
+    name: "Giveways",
+  },
+  {
+    id: 3,
+    name: "Other",
+  },
+];
+
+export const RETENTION_OFTEN = [
+  {
+    id: 1,
+    name: "Weekly",
+  },
+  {
+    id: 2,
+    name: "Biweekly",
+  },
+  {
+    id: 3,
+    name: "Monthly",
+  },
+  {
+    id: 4,
+    name: "Qtrly",
+  },
+  {
+    id: 5,
+    name: "Annually",
+  },
+];
+
+export const RETENTION_TABS = [
+  {
+    id: 1,
+    name: "Retention",
+  },
+  {
+    id: 2,
+    name: "Maintenance",
+  },
+];
+
+export const AVERAGE_TIME_MAINTENANCE = [
+  {
+    id: 1,
+    name: "24",
+  },
+  {
+    id: 2,
+    name: "48",
+  },
+  {
+    id: 3,
+    name: "72",
+  },
+  {
+    id: 4,
+    name: "96+",
+  },
+];
+
+export const WORK_ORDERS_SUBMITTED = [
+  {
+    id: 1,
+    name: "0-5",
+  },
+  {
+    id: 2,
+    name: "5-10",
+  },
+  {
+    id: 3,
+    name: "10+",
+  },
+];
+
+export const MAINTENANCE_ADVANCE = [
+  {
+    id: 1,
+    name: "Month of renewal",
+  },
+  {
+    id: 2,
+    name: "30 days",
+  },
+  {
+    id: 3,
+    name: "60 days",
+  },
+  {
+    id: 4,
+    name: "90 days",
+  },
+];
