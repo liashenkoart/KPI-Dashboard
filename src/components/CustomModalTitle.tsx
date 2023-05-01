@@ -1,4 +1,5 @@
 import { Dialog } from "@headlessui/react";
+import { X } from "phosphor-react";
 import { useAppDispatch } from "../lib/hooks";
 import { toggleModal } from "../lib/slices/ui";
 import Button from "./Button";
@@ -15,10 +16,9 @@ export const CustomModalTitle = ({ title }: ICustomModalTitle) => {
       <Dialog.Title as="h2" className="text-lg font-bold text-blue-500">
         {title}
       </Dialog.Title>
-      <Button
-        title="X"
-        onClick={() => dispatch(toggleModal({ value: false, type: "" }))}
-      />
+      <Button onClick={() => dispatch(toggleModal({ value: false, type: "" }))}>
+        <X />
+      </Button>
     </div>
   );
 };
