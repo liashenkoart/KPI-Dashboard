@@ -217,7 +217,6 @@ export const OCCUPANCY_MOCK_DATA = [
     profit: 500,
     loss: 200,
   },
-  {},
 ];
 
 export const MONTHS = [
@@ -378,7 +377,7 @@ export const RETENTION_OFTEN = [
   },
   {
     id: 5,
-    name: "Annually",
+    name: "Annualy",
   },
 ];
 

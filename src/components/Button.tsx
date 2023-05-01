@@ -1,11 +1,11 @@
 interface IButton {
   onClick?: (value?: boolean) => any;
-  title: string;
+  children: React.ReactNode | string;
   classes?: string;
 }
 
 const Button = (props: IButton) => {
-  const { title, classes, onClick } = props;
+  const { children, classes, onClick } = props;
 
   const handleButtonClick = () => {
     if (onClick) {
@@ -16,9 +16,9 @@ const Button = (props: IButton) => {
   return (
     <button
       onClick={handleButtonClick}
-      className={`shadow-sm rounded-md text-white leading-relaxed px-2 bg-blue-500 hover:bg-blue-200 transform transition-colors ${classes}`}
+      className={`shadow-sm min-h-[20px] rounded-md text-white leading-relaxed p-2 bg-blue-500 hover:bg-blue-200 transform transition-colors ${classes}`}
     >
-      {title}
+      {children}
     </button>
   );
 };

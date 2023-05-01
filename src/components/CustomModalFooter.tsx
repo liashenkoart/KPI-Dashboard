@@ -4,16 +4,24 @@ import Button from "./Button";
 
 interface ICustomModalFooter {
   hasCancelButton?: boolean;
-  saveButtonText?: string;
+  saveButton?: React.ReactNode | string;
   classes?: string;
+  handleSave?: () => any;
 }
 
 export const CustomModalFooter = ({
   hasCancelButton = true,
-  saveButtonText = "Save",
+  saveButton = "Save",
+  handleSave,
   classes = "",
 }: ICustomModalFooter) => {
   const dispatch = useAppDispatch();
+
+  const handleClick = () => {
+    if (handleSave) {
+      handleSave();
+    }
+  };
 
   return (
     <footer
@@ -22,15 +30,18 @@ export const CustomModalFooter = ({
       {hasCancelButton && (
         <Button
           onClick={() => dispatch(toggleModal({ value: false, type: "" }))}
-          title="Cancel"
           classes="text-xs py-2 px-6 bg-red-400"
-        />
+        >
+          Cancel
+        </Button>
       )}
 
       <Button
-        title={saveButtonText}
+        onClick={handleClick}
         classes="text-xs py-2 px-6 bg-green-800 hover:bg-green-900"
-      />
+      >
+        {saveButton}
+      </Button>
     </footer>
   );
 };

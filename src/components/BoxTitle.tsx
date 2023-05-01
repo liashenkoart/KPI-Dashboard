@@ -1,3 +1,4 @@
+import { Plus } from "phosphor-react";
 import { useAppDispatch } from "../lib/hooks";
 import { toggleModal } from "../lib/slices/ui";
 import Button from "./Button";
@@ -18,11 +19,12 @@ export const BoxTitle = (props: IBoxTitle) => {
       <h2 className="box-title">{title}</h2>
       {hasButton && (
         <Button
-          title={buttonTitle ? buttonTitle : "+"}
           onClick={() =>
             dispatch(toggleModal({ value: true, type: modalType || title }))
           }
-        />
+        >
+          {buttonTitle ? buttonTitle : <Plus />}
+        </Button>
       )}
     </div>
   );
