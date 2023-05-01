@@ -20,6 +20,7 @@ export const Occupancy = () => {
   const dispatch = useAppDispatch();
   const isOpenModal = useAppSelector((state) => state.ui.isOpenModal);
   const modalType = useAppSelector((state) => state.ui.modalType);
+  const data = useAppSelector((state) => state.occupancy.occupancy);
 
   return (
     <>
