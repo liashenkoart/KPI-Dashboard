@@ -444,3 +444,314 @@ export const MAINTENANCE_ADVANCE = [
     name: "90 days",
   },
 ];
+
+export const MARKETING_SOURCE_FREQUENCY = [
+  {
+    id: 1,
+    name: "Pay as you go",
+  },
+  {
+    id: 2,
+    name: "Monthly",
+  },
+  {
+    id: 3,
+    name: "Annualy",
+  },
+];
+
+export const MARKETING_SOURCE_AMOUNT = [
+  {
+    id: 1,
+    name: 0,
+  },
+  {
+    id: 2,
+    name: 1000,
+  },
+  {
+    id: 3,
+    name: 2000,
+  },
+  {
+    id: 4,
+    name: 3000,
+  },
+  {
+    id: 5,
+    name: 4000,
+  },
+  {
+    id: 6,
+    name: 5000,
+  },
+  {
+    id: 7,
+    name: 6000,
+  },
+  {
+    id: 8,
+    name: 7000,
+  },
+  {
+    id: 9,
+    name: 8000,
+  },
+  {
+    id: 10,
+    name: 9000,
+  },
+  {
+    id: 11,
+    name: 10000,
+  },
+];
+
+export const OCCUPANCY_MARKETING_SOURCES = [
+  {
+    id: 1,
+    name: "apts.com",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 2,
+    name: "Google Adwords",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 3,
+    name: "Facebook",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 4,
+    name: "Instagram",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 5,
+    name: "Hot pads",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 6,
+    name: "Youtube",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 7,
+    name: "Trilio",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 8,
+    name: "Zillow",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+  {
+    id: 9,
+    name: "Apartment List",
+    confirmFrequency: MARKETING_SOURCE_FREQUENCY[0],
+    amount: MARKETING_SOURCE_AMOUNT[0],
+    leads: [undefined, undefined, undefined],
+    tours: [undefined, undefined, undefined],
+    closingRatio: [undefined, undefined, undefined],
+  },
+];
+
+export const ONSITE_MEMBERS = new Array(20)
+  .fill(undefined)
+  .map((value, index) => ({ id: index, name: index + 1 }));
+
+export const YTD = new Array(100)
+  .fill(undefined)
+  .map((_, index) => ({ id: index, name: index + 1 }));
+
+export const CLOSING_RATIO_PERCENTAGE = [
+  {
+    id: 1,
+    name: "0-10%",
+  },
+  {
+    id: 2,
+    name: "10-20%",
+  },
+  {
+    id: 3,
+    name: "20-30%",
+  },
+  {
+    id: 4,
+    name: "30% or higher",
+  },
+];
+
+export const RENEWALS_SENT = [
+  {
+    id: 1,
+    name: "Daily",
+  },
+  {
+    id: 2,
+    name: "Weekly",
+  },
+  {
+    id: 3,
+    name: "Monthly",
+  },
+  {
+    id: 4,
+    name: "Annualy",
+  },
+  {
+    id: 5,
+    name: "Sporadic",
+  },
+];
+
+export const ONLINE_RATING = [
+  {
+    id: 1,
+    name: "Google",
+  },
+  {
+    id: 2,
+    name: "Apt Ratings",
+  },
+  {
+    id: 3,
+    name: "Yelp",
+  },
+  {
+    id: 4,
+    name: "FB",
+  },
+];
+
+export const MOVE_OUT_REASONS = [
+  {
+    id: 1,
+    name: "Price",
+  },
+  {
+    id: 2,
+    name: "Location",
+  },
+  {
+    id: 3,
+    name: "Team",
+  },
+  {
+    id: 4,
+    name: "Relocation",
+  },
+  {
+    id: 5,
+    name: "Job",
+  },
+  {
+    id: 6,
+    name: "Loss of roommate",
+  },
+  {
+    id: 7,
+    name: "Company",
+  },
+  {
+    id: 8,
+    name: "Property condition",
+  },
+  {
+    id: 9,
+    name: "Maintenance",
+  },
+];
+
+export const LEADS_MANAGEMENT = [
+  {
+    id: 1,
+    name: "Daily",
+  },
+  {
+    id: 2,
+    name: "Weekly",
+  },
+  {
+    id: 3,
+    name: "Monthly",
+  },
+  {
+    id: 4,
+    name: "Sporadic",
+  },
+];
+
+export const OVERSEE_PROCESS = [
+  {
+    id: 1,
+    name: "Leasing mgr",
+  },
+  {
+    id: 2,
+    name: "APM",
+  },
+  {
+    id: 3,
+    name: "PM",
+  },
+  {
+    id: 4,
+    name: "Other",
+  },
+];
+
+export const GOALS_OFTEN = [
+  {
+    id: 1,
+    name: "Daily",
+  },
+  {
+    id: 2,
+    name: "Weekly",
+  },
+  {
+    id: 3,
+    name: "Monthly",
+  },
+  {
+    id: 4,
+    name: "Annually",
+  },
+];

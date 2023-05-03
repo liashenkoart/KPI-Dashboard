@@ -20,4 +20,34 @@
   .form-label {
     @apply text-sm text-blue-400 mb-2 block;
   }
+
+  .form-divider {
+    @apply py-4 border-b-[1px] z-[4] border-gray-200 sticky -top-6 bg-white;
+  }
+
+  .form-portion {
+    @apply text-sm text-pink-400 block font-bold;
+  }
+
+  .form-cont {
+    @apply pl-4 mt-4 relative transform transition-all;
+  }
+
+  .form-switch {
+    @apply flex items-center justify-between gap-4;
+  }
+
+  .flex-inputs {
+    @apply flex items-center gap-3 md:gap-4;
+  }
+}
+
+.form-cont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 100%;
+  width: 2px;
+  background-color: rgb(229, 231, 235);
 }

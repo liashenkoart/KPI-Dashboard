@@ -8,10 +8,12 @@ type Value = {
 };
 
 interface ISelect {
-  value: Value;
+  value: Value | Value[];
   onChange: any;
   data: Value[];
   direction?: "top" | "bottom";
+  isMultiple?: boolean;
+  name?: string;
 }
 
 export const Select = ({
@@ -19,12 +21,29 @@ export const Select = ({
   onChange,
   data,
   direction = "top",
+  isMultiple = false,
+  name,
 }: ISelect) => {
   return (
-    <Listbox value={value} onChange={onChange}>
+    <Listbox
+      value={value}
+      onChange={onChange}
+      multiple={isMultiple}
+      name={name ? name : undefined}
+    >
       <div className="relative mt-1">
         <Listbox.Button className="relative w-full cursor-pointer rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-sm border border-gray-200 focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
-          <span className="block truncate">{value.name}</span>
+          {!value ? (
+            <span>Select an option...</span>
+          ) : (
+            <span className="block truncate">
+              {isMultiple && Array.isArray(value)
+                ? value.map((val) => val.name).join(", ")
+                : /* @ts-ignore */
+                  value.name}
+            </span>
+          )}
+
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <CaretDoubleDown />
           </span>
